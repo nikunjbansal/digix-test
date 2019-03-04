@@ -1,0 +1,1 @@
+An API must send the response in JSON format as JSON is easily consumed by multiple clients. JSON is light weight resulting in lesser data transfer over the wire as compared to a HTML response. JSON is also more human readable as compared to a XML response.
