@@ -1,10 +1,18 @@
 /*
 
-An Authentication service will provide JSON web token to the client. Each request that the client makes will contain that token in the HTTP header. The backend webservice will have a router setup such that each route before rendering will first call a function to check if the token provided is valid or not, and if valid, then the token is associated with which user. If the token is valid, the route will get rendered. Otherwise the client will be forced to redirect to /login route. 
+An Authentication service will provide JSON web token to the client. 
+Each request that the client makes will contain that token in the HTTP header. 
+The backend webservice will have a router setup such that each route before rendering will first 
+call a function to check if the token provided is valid or not, and if valid, 
+then the token is associated with which user. If the token is valid, the route will get rendered. 
+Otherwise the client will be forced to redirect to /login route. 
 
-The login route is a HTTP post method which will accept username and password as data, and upon validation it will generate a token to be sent to client. The token will also be stored in Database(user_login table with user_id, token, login_time etc. as columns).
+The login route is a HTTP post method which will accept username and password as data, 
+and upon validation it will generate a token to be sent to client. 
+The token will also be stored in Database(user_login table with user_id, token, login_time etc. as columns).
 
-After the client receives token from the login call, it will save the token in localStorage, and will send it as HTTP header in every call made to the webservice.
+After the client receives token from the login call, it will save the token in localStorage, 
+and will send it as HTTP header in every call made to the webservice.
 
  */
 
